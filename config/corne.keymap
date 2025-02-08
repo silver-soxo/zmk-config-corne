@@ -76,6 +76,90 @@
 
             label = "GREATER_THAN";
         };
+
+        letf_brace: letf_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "LETF_BRACE";
+        };
+
+        right_brace: right_brace {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_1 &kp KP_NUMBER_2 &kp KP_NUMBER_5>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "RIGHT_BRACE";
+        };
+
+        letf_barcket: letf_barcket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_9 &kp KP_NUMBER_1>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "LETF_BARCKET";
+        };
+
+        right_bracket: right_bracket {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_9 &kp KP_NUMBER_3>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "RIGHT_BRACKET";
+        };
+
+        slash: slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_4 &kp KP_NUMBER_7>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "SLASH";
+        };
+
+        back_slash: back_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_9 &kp KP_NUMBER_2>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "BACK_SLASH";
+        };
     };
 
     keymap {
@@ -119,10 +203,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT                &kp HASH   &kp DLLR               &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &less_than            &kp EQUAL  &greater_than          &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                           &kp LGUI   &mo 3                  &kp SPACE    &kp RET    &trans     &kp RALT
+&kp TAB    &kp EXCL  &kp AT                &kp HASH   &kp DLLR               &kp PRCNT         &kp LCTRL    &kp AMPS       &kp ASTRK       &kp LPAR        &kp RPAR  &kp BSPC
+&kp LCTRL  &trans    &kp LEFT_PARENTHESIS  &kp MINUS  &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &slash       &letf_brace    &kp UNDERSCORE  &right_brace    &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &less_than            &kp EQUAL  &greater_than          &kp PLUS          &back_slash  &letf_barcket  &kp PLUS        &right_bracket  &kp PIPE  &kp TILDE
+                                           &kp LGUI   &mo 3                  &kp SPACE         &kp RET      &trans         &kp RALT
             >;
         };
 
