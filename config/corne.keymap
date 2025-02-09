@@ -18,9 +18,9 @@
             bindings = <&kp ESC>;
         };
 
-        switch_lang {
-            bindings = <&mt LEFT_ALT LEFT_SHIFT>;
-            key-positions = <36 24>;
+        swith_lang {
+            bindings = <&switch_lang>;
+            key-positions = <24 36>;
         };
     };
 
@@ -360,6 +360,20 @@
                 <&kp LEFT_ALT>;
 
             label = "COLON_SIGN";
+        };
+
+        switch_lang: switch_lang {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp LEFT_SHIFT>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "SWITCH_LANG";
         };
     };
 
