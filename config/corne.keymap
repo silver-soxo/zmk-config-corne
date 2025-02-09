@@ -17,6 +17,11 @@
             key-positions = <0 1>;
             bindings = <&kp ESC>;
         };
+
+        switch_lang {
+            bindings = <&mt LEFT_ALT LEFT_SHIFT>;
+            key-positions = <36 24>;
+        };
     };
 
     behaviors {
@@ -328,6 +333,34 @@
 
             label = "SLASH_SIGN";
         };
+
+        semicolon_sign: semicolon_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_5 &kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "SEMICOLON_SIGN";
+        };
+
+        colon_sign: colon_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_5 &kp KP_NUMBER_9>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "COLON_SIGN";
+        };
     };
 
     keymap {
@@ -371,10 +404,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL  &at_sign              &hash_sign      &dollar_sign           &kp PRCNT      &caret_sign  &ask_sign      &kp ASTRK       &ampersant_sign  &kp PLUS    &kp EQUAL
-&none  &trans    &kp LEFT_PARENTHESIS  &kp MINUS       &kp RIGHT_PARENTHESIS  &slash_sign    &slash       &letf_brace    &kp UNDERSCORE  &right_brace     &kp BSLH    &grave_sign
-&none  &trans    &less_than            &double_quotes  &greater_than          &none          &back_slash  &letf_barcket  &single_quote   &right_bracket   &pipe_sign  &tilde_sign
-                                       &kp LGUI        &mo 3                  &kp SPACE      &kp RET      &trans         &kp RALT
+&none  &kp EXCL        &at_sign              &hash_sign      &dollar_sign           &kp PRCNT         &caret_sign  &ask_sign      &kp ASTRK        &ampersant_sign  &kp PLUS    &kp EQUAL
+&none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp MINUS       &kp RIGHT_PARENTHESIS  &slash_sign       &slash       &letf_brace    &semicolon_sign  &right_brace     &kp BSLH    &grave_sign
+&none  &trans          &less_than            &double_quotes  &greater_than          &double_quotes    &back_slash  &letf_barcket  &colon_sign      &right_bracket   &pipe_sign  &tilde_sign
+                                             &kp LGUI        &mo 3                  &kp SPACE         &kp RET      &trans         &kp RALT
             >;
         };
 
