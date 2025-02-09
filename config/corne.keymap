@@ -230,6 +230,34 @@
 
             label = "ASK_SIGN";
         };
+
+        ampersant_sign: ampersant_sign {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "AMPERSANT_SIGN";
+        };
+
+        double_quotes: double_quotes {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_ALT>,
+                <&macro_tap>,
+                <&kp KP_NUMBER_3 &kp KP_NUMBER_8>,
+                <&macro_release>,
+                <&kp LEFT_ALT>;
+
+            label = "DOUBLE_QUOTES";
+        };
     };
 
     keymap {
@@ -273,10 +301,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &at_sign              &hash_sign  &dollar_sign           &kp PRCNT         &caret_sign  &ask_sign      &kp ASTRK       &kp PLUS        &kp PLUS  &kp EQUAL
-&kp LCTRL  &trans    &kp LEFT_PARENTHESIS  &kp MINUS   &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &slash       &letf_brace    &kp UNDERSCORE  &right_brace    &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &less_than            &kp EQUAL   &greater_than          &kp PLUS          &back_slash  &letf_barcket  &kp PLUS        &right_bracket  &kp PIPE  &kp TILDE
-                                           &kp LGUI    &mo 3                  &kp SPACE         &kp RET      &trans         &kp RALT
+&kp TAB    &kp EXCL  &at_sign              &hash_sign         &dollar_sign           &kp PRCNT         &caret_sign  &ask_sign      &kp ASTRK         &ampersant_sign  &kp PLUS  &kp EQUAL
+&kp LCTRL  &trans    &kp LEFT_PARENTHESIS  &kp MINUS          &kp RIGHT_PARENTHESIS  &kp UNDERSCORE    &slash       &letf_brace    &kp UNDERSCORE    &right_brace     &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans    &less_than            &kp DOUBLE_QUOTES  &greater_than          &kp PLUS          &back_slash  &letf_barcket  &kp SINGLE_QUOTE  &right_bracket   &kp PIPE  &kp TILDE
+                                           &kp LGUI           &mo 3                  &kp SPACE         &kp RET      &trans         &kp RALT
             >;
         };
 
