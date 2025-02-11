@@ -403,10 +403,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp GRAVE  &none  &kp HOME      &kp UP        &kp END        &kp INSERT        &kp PAGE_UP      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none         &kp LEFT_BRACKET
-&none      &none  &kp LEFT      &kp DOWN      &kp RIGHT      &kp KP_NUMLOCK    &kp PAGE_DOWN    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp RIGHT_BRACKET
-&none      &none  &kp LC(LEFT)  &kp CAPSLOCK  &kp LC(RIGHT)  &kp DEL           &kp PRINTSCREEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
-                                &kp LGUI      &trans         &kp SPACE         &kp RET          &mo 3         &kp RALT
+&kp GRAVE  &none  &kp HOME      &kp UP        &kp END        &kp INSERT    &kp PAGE_UP      &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &none         &kp LEFT_BRACKET
+&none      &none  &kp LEFT      &kp DOWN      &kp RIGHT      &none         &kp PAGE_DOWN    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp NUMBER_0  &kp RIGHT_BRACKET
+&none      &none  &kp LC(LEFT)  &kp CAPSLOCK  &kp LC(RIGHT)  &kp DEL       &kp PRINTSCREEN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans        &trans
+                                &kp LGUI      &trans         &kp SPACE     &kp RET          &mo 3         &kp RALT
             >;
         };
 
@@ -418,10 +418,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL        &at_sign              &hash_sign      &dollar_sign           &kp PRCNT         &caret_sign  &ask_sign      &kp ASTRK        &ampersant_sign  &kp PLUS    &kp EQUAL
-&none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp MINUS       &kp RIGHT_PARENTHESIS  &slash_sign       &slash       &letf_brace    &semicolon_sign  &right_brace     &kp BSLH    &grave_sign
-&none  &trans          &less_than            &double_quotes  &greater_than          &double_quotes    &back_slash  &letf_barcket  &colon_sign      &right_bracket   &pipe_sign  &tilde_sign
-                                             &kp LGUI        &mo 3                  &kp SPACE         &kp RET      &trans         &kp RALT
+&none  &kp EXCL        &at_sign              &hash_sign     &dollar_sign           &kp PRCNT         &caret_sign  &ask_sign      &kp ASTRK        &ampersant_sign  &kp PLUS    &kp EQUAL
+&none  &kp UNDERSCORE  &kp LEFT_PARENTHESIS  &kp MINUS      &kp RIGHT_PARENTHESIS  &slash_sign       &slash       &letf_brace    &semicolon_sign  &right_brace     &kp BSLH    &grave_sign
+&none  &trans          &less_than            &single_quote  &greater_than          &double_quotes    &back_slash  &letf_barcket  &colon_sign      &right_bracket   &pipe_sign  &tilde_sign
+                                             &kp LGUI       &mo 3                  &kp SPACE         &kp RET      &trans         &kp RALT
             >;
         };
 
