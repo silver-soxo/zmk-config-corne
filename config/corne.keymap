@@ -418,10 +418,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&none  &kp EXCL        &at_sign     &hash_sign     &dollar_sign   &kp PRCNT         &caret_sign  &ask_sign             &kp ASTRK        &ampersant_sign        &kp PLUS    &kp EQUAL
-&none  &kp UNDERSCORE  &letf_brace  &kp MINUS      &right_brace   &slash_sign       &slash       &kp LEFT_PARENTHESIS  &semicolon_sign  &kp RIGHT_PARENTHESIS  &kp BSLH    &grave_sign
-&none  &trans          &less_than   &single_quote  &greater_than  &double_quotes    &back_slash  &letf_barcket         &colon_sign      &right_bracket         &pipe_sign  &tilde_sign
-                                    &kp LGUI       &mo 3          &kp SPACE         &kp RET      &trans                &kp RALT
+&none  &kp EXCL        &at_sign       &hash_sign     &dollar_sign    &kp PRCNT         &caret_sign  &ask_sign             &kp ASTRK        &ampersant_sign        &kp PLUS    &kp EQUAL
+&none  &kp UNDERSCORE  &letf_barcket  &kp MINUS      &right_bracket  &slash_sign       &slash       &kp LEFT_PARENTHESIS  &semicolon_sign  &kp RIGHT_PARENTHESIS  &kp BSLH    &grave_sign
+&none  &trans          &less_than     &single_quote  &greater_than   &double_quotes    &back_slash  &letf_brace           &colon_sign      &right_brace           &pipe_sign  &tilde_sign
+                                      &kp LGUI       &mo 3           &kp SPACE         &kp RET      &trans                &kp RALT
             >;
         };
 
