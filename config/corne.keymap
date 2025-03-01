@@ -22,6 +22,11 @@
             bindings = <&switch_lang>;
             key-positions = <24 36>;
         };
+
+        CTRL {
+            bindings = <&kp RCTRL>;
+            key-positions = <36 12>;
+        };
     };
 
     behaviors {
