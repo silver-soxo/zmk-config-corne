@@ -24,7 +24,7 @@
         };
 
         CTRL {
-            bindings = <&kp RCTRL>;
+            bindings = <&kp LS(LEFT_ALT)>;
             key-positions = <36 12>;
         };
     };
